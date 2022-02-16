@@ -30,7 +30,7 @@
                 >Income:</label
               >
               <input
-                class="bg-gray-200 p-1 ml-2"
+                class="bg-gray-200 py-1 text-center ml-2"
                 type="text"
                 name=""
                 id="income-amount"
@@ -44,7 +44,7 @@
                   >Food:</label
                 >
                 <input
-                  class="bg-gray-200 p-1 ml-2"
+                  class="bg-gray-200 py-1 text-center ml-2"
                   type="text"
                   name=""
                   id="food-amount"
@@ -55,16 +55,16 @@
                   >Rent:</label
                 >
                 <input
-                  class="bg-gray-200 p-1 ml-3"
+                  class="bg-gray-200 py-1 text-center ml-2"
                   type="text"
                   name=""
                   id="rent-amount"
                 />
               </div>
               <div>
-                <label class="text-xl font-medium " for="cloth-amount">Clothes:</label>
+                <label class="text-xl font-medium " for="cloth-amount">Clothes: </label>
               <input
-                class="bg-gray-200 p-1 mr-2"
+                class="bg-gray-200 py-1 text-center mr-4"
                 type="text"
                 name=""
                 id="cloth-amount"
@@ -79,7 +79,15 @@
             <!-- Total expense and Remaining balance -->
             <h3 class="text-2xl font-bold mb-4 text-center my-6">Total Expenses: <span>5500</span></h3>
             <h3 class="text-2xl font-bold mb-4 text-center my-6">Balance <span>4500</span></h3>
-            <div></div>
+            <!-- Savings -->
+            <div class="text-center">
+                <label class="text-xl font-medium" for="saving-amount">Save: </label>
+                <input class="bg-gray-200 py-1 text-center w-1/6 font-semibold text-lg" type="text" name="" id="saving-amount">
+                <span class="text-xl font-bold">%</span>
+                <button class="bg-sky-500 hover:bg-sky-700 px-10 py-3 text-xl leading-5 rounded-md font-semibold text-white">
+                    Save
+                  </button>
+            </div>
           </div>
         </div>
       </section>
