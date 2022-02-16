@@ -10,17 +10,17 @@
   </head>
   <body>
     <!-- Header Area -->
-    <header class="mt-20 mb-8">
-      <h1 class="text-4xl text-center font-bold text-teal-600">
+    <header class="mt-4 md:mt-20 mb-8">
+      <h1 class="text-2xl md:text-4xl text-center font-bold text-teal-600">
         Your Accountant 💵
       </h1>
     </header>
     <!-- Main Area -->
     <main>
-      <section class="w-3/4 mx-auto">
-        <div class="grid grid-cols-2 gap-4">
+      <section class="w-5/6 mx-auto">
+        <div class="grid grid-cols-1  md:grid-cols-2 gap-4">
           <div>
-            <img src="./images/6573.jpg" alt="" />
+            <img style="object-fit: cover;" class="h-fit md:h-screen" src="./images/8.jpg" alt="" />
           </div>
           <div class="bg-gray-50 p-5 rounded-lg space-y-6">
               <!-- Income -->
@@ -30,7 +30,7 @@
                 >Income:</label
               >
               <input
-                class="bg-gray-200 py-1 text-center ml-2"
+                class="bg-gray-200 py-1 text-center ml-2 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
                 type="text"
                 name=""
                 id="income-amount"
@@ -44,7 +44,7 @@
                   >Food:</label
                 >
                 <input
-                  class="bg-gray-200 py-1 text-center ml-2"
+                  class="bg-gray-200 py-1 text-center ml-2 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
                   type="text"
                   name=""
                   id="food-amount"
@@ -55,7 +55,7 @@
                   >Rent:</label
                 >
                 <input
-                  class="bg-gray-200 py-1 text-center ml-2"
+                  class="bg-gray-200 py-1 text-center ml-2 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
                   type="text"
                   name=""
                   id="rent-amount"
@@ -64,7 +64,7 @@
               <div>
                 <label class="text-xl font-medium " for="cloth-amount">Clothes: </label>
               <input
-                class="bg-gray-200 py-1 text-center mr-4"
+                class="bg-gray-200 py-1 text-center mr-4 focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1"
                 type="text"
                 name=""
                 id="cloth-amount"
@@ -77,17 +77,20 @@
                   </button>
             </div>
             <!-- Total expense and Remaining balance -->
-            <h3 class="text-2xl font-bold mb-4 text-center my-6">Total Expenses: <span>5500</span></h3>
-            <h3 class="text-2xl font-bold mb-4 text-center my-6">Balance <span>4500</span></h3>
+            <h3 class="text-xl md:text-2xl font-bold mb-4 text-center my-6">Total Expenses: <span>00</span></h3>
+            <h3 class="text-xl md:text-2xl font-bold mb-4 text-center my-6">Balance <span>00</span></h3>
             <!-- Savings -->
             <div class="text-center">
                 <label class="text-xl font-medium" for="saving-amount">Save: </label>
-                <input class="bg-gray-200 py-1 text-center w-1/6 font-semibold text-lg" type="text" name="" id="saving-amount">
+                <input class="bg-gray-200 py-1 text-center w-1/6 font-semibold text-lg focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1" type="text" name="" id="saving-amount">
                 <span class="text-xl font-bold">%</span>
                 <button class="bg-sky-500 hover:bg-sky-700 px-10 py-3 text-xl leading-5 rounded-md font-semibold text-white">
                     Save
                   </button>
             </div>
+            <!-- savings and Remaining balance -->
+            <h3 class="text-xl md:text-2xl font-bold mb-4 text-center my-6">Saving Amount: <span>00</span></h3>
+            <h3 class="text-xl md:text-2xl font-bold mb-4 text-center my-6">Remaining Balance: <span>00</span></h3>
           </div>
         </div>
       </section>
