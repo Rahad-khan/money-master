@@ -18,7 +18,7 @@
     <!-- Main Area -->
     <main>
       <section class="w-5/6 mx-auto">
-        <div class="grid grid-cols-1  md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1  md:grid-cols-2 gap-x-8">
           <div>
             <img style="object-fit: cover;" class="h-fit md:h-screen" src="./images/6573.jpg" alt="" />
           </div>
@@ -76,6 +76,10 @@
                     Calculate
                   </button>
             </div>
+            <!-- Error Section -->
+            <p id="error-number" class="errors text-center text-lg hidden">❌ Please Fill all the input with Number</p>
+            <p id="error-negative" class="errors text-center text-lg hidden">❌  Amount has to be equal or more than 0</p>
+            <p id="error-expense" class="errors text-center text-lg hidden">❌  You can't spent more money than you earn</p>
             <!-- Total expense and Remaining balance -->
             <h3 class="text-xl md:text-2xl font-bold mb-4 text-center my-6">Total Expenses: <span id="total-expense">00</span></h3>
             <h3 class="text-xl md:text-2xl font-bold mb-4 text-center my-6">Balance <span id="remaining-amount">00</span></h3>

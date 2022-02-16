@@ -8,9 +8,13 @@ function takeStringText(inputid) {
   const inputValue = parseFloat(inputText);
   return inputValue;
 }
-//global variable
-/* let incomeAmount = takeInputValue("income");
-console.log(incomeAmount); */
+//Error function
+function errorNone() {
+  const errors = document.getElementsByClassName("errors");
+  for (const error of errors) {
+    error.style.display = "none";
+  }
+}
 
 document
   .getElementById("calculate-total")
@@ -20,25 +24,42 @@ document
     const rentAmount = takeInputValue("rent");
     const clothAmount = takeInputValue("cloth");
     const totalExpense = foodAmount + rentAmount + clothAmount;
-    console.log(incomeAmount);
-    if (isNaN(totalExpense)) {
-      alert("please fill all the input with Number");
+    // isNotANumber handeling
+    if (isNaN(totalExpense) || isNaN(incomeAmount)) {
+      errorNone();
+      return (document.getElementById("error-number").style.display = "block");
     }
-    debugger;
-    if (incomeAmount < totalExpense || isNaN(incomeAmount)) {
-      return alert("u haven't sufficient balance");
+    // negativeNumber handeling
+    if (
+      incomeAmount < 0 ||
+      foodAmount < 0 ||
+      rentAmount < 0 ||
+      clothAmount < 0
+    ) {
+        errorNone();
+      return (document.getElementById("error-negative").style.display =
+        "block");
     }
+    //more expnese less income error
+    if (totalExpense>incomeAmount) {
+        errorNone();
+        return (document.getElementById("error-expense").style.display =
+        "block");
+    }
+
     document.getElementById("total-expense").innerText = totalExpense;
     document.getElementById("remaining-amount").innerText =
       incomeAmount - totalExpense;
+    errorNone();
   });
 document.getElementById("savings").addEventListener("click", function () {
   const savingInput = takeInputValue("saving");
   const incomeAmount = takeInputValue("income");
-  const totalSaving = incomeAmount * (savingInput/100);
+  const totalSaving = incomeAmount * (savingInput / 100);
 
   document.getElementById("total-saving").innerText = totalSaving;
   const balance = takeStringText("remaining");
-  console.log(balance);
-  document.getElementById("remaining-balance").innerText = balance - totalSaving;
+  document.getElementById("remaining-balance").innerText =
+    balance - totalSaving;
+  errorNone();
 });
