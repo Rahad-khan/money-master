@@ -1,28 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Money Accountant</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header Area -->
     <header class="mt-20 mb-8">
-        <h1 class="text-4xl text-center font-bold text-teal-600	">Your Accountant</h1>
+      <h1 class="text-4xl text-center font-bold text-teal-600">
+        Your Accountant 💵
+      </h1>
     </header>
     <!-- Main Area -->
     <main>
-        <section class="w-3/4 mx-auto">
-            <div class="grid grid-cols-2 gap-4">
-                <div>01</div>
-                <div>09</div>
+      <section class="w-3/4 mx-auto">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <img src="./images/6573.jpg" alt="" />
+          </div>
+          <div class="bg-gray-50 p-5 rounded-lg space-y-6">
+              <!-- Income -->
+            <div class="text-center">
+              <h3 class="text-2xl font-bold mb-4">Income</h3>
+              <label class="text-xl font-medium" for="income-amount"
+                >Income:</label
+              >
+              <input
+                class="bg-gray-200 p-1 ml-2"
+                type="text"
+                name=""
+                id="income-amount"
+              />
+            </div>
+            <!-- Expenses -->
+            <div class="text-center space-y-4">
+              <h3 class="text-2xl font-bold mb-4">Expenses</h3>
+              <div>
+                <label class="text-xl font-medium" for="food-amount"
+                  >Food:</label
+                >
+                <input
+                  class="bg-gray-200 p-1 ml-2"
+                  type="text"
+                  name=""
+                  id="food-amount"
+                />
               </div>
-        </section>
+              <div>
+                <label class="text-xl font-medium" for="rent-amount"
+                  >Rent:</label
+                >
+                <input
+                  class="bg-gray-200 p-1 ml-3"
+                  type="text"
+                  name=""
+                  id="rent-amount"
+                />
+              </div>
+              <div>
+                <label class="text-xl font-medium " for="cloth-amount">Clothes:</label>
+              <input
+                class="bg-gray-200 p-1 mr-2"
+                type="text"
+                name=""
+                id="cloth-amount"
+              />
+              </div>
+            </div>
+            <div class="flex justify-center	">
+                <button class="bg-sky-500 hover:bg-sky-700 px-7 py-3 text-xl leading-5 rounded-md font-semibold text-white">
+                    Calculate
+                  </button>
+            </div>
+            <!-- Total expense and Remaining balance -->
+            <h3 class="text-2xl font-bold mb-4 text-center my-6">Total Expenses: <span>5500</span></h3>
+            <h3 class="text-2xl font-bold mb-4 text-center my-6">Balance <span>4500</span></h3>
+            <div></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
