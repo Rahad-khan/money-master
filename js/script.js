@@ -1,5 +1,3 @@
-//global variable
-
 // Take input value by using id
 function takeInputValue(inputid) {
   const inputText = document.getElementById(inputid + "-amount").value;
