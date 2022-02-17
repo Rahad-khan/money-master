@@ -1,3 +1,5 @@
+//global variable
+
 // Take input value by using id
 function takeInputValue(inputid) {
   const inputText = document.getElementById(inputid + "-amount").value;
@@ -21,7 +23,6 @@ function errorNone(clearValue) {
     document.getElementById("remaining-balance").innerText = "00";
   }
 }
-document.getElementById("total-expense").innerText = "00";
 // isNaN error function
 function notANumber(value1, value2, inputid,validation) {
   if (isNaN(value1) || isNaN(value2)) {
@@ -99,12 +100,10 @@ document.getElementById("savings").addEventListener("click", function () {
   const balance = parseFloat(balanceText);
 // saving is more than remaining balance type error
 if (balance < totalSaving) {
-  // errorNone();
-  document.getElementById("remaining-balance").innerText = "00";
+  errorNone(false);
   return (document.getElementById("error-saving").style.display = "block");
 }
   document.getElementById("total-saving").innerText = (totalSaving).toFixed(2);
-    document.getElementById("error-saving").style.display = "none"
     document.getElementById("remaining-balance").innerText =
       (balance - totalSaving).toFixed(2);
 });
