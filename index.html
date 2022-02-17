@@ -19,6 +19,7 @@
     <main>
       <section class="w-5/6 mx-auto">
         <div class="grid grid-cols-1  md:grid-cols-2 gap-x-8">
+          <!-- Hero image -->
           <div>
             <img style="object-fit: cover;" class="h-fit md:h-screen" src="./images/10.jpg" alt="" />
           </div>
@@ -71,6 +72,7 @@
               />
               </div>
             </div>
+            <!-- calculation -->
             <div class="flex justify-center	">
                 <button id="calculate-total" class="bg-sky-500 hover:bg-sky-700 px-7 py-3 text-xl leading-5 rounded-md font-semibold text-white">
                     Calculate
@@ -93,19 +95,21 @@
                   </button>
             </div>
             <!-- savings and Remaining balance -->
-            <!-- errors -->
+            <!-- errors area start -->
             <p id="error-validation" class="errors text-center text-lg hidden">❌  Please Fill all the input with Number</p>
             <p id="error-negative-2nd" class="errors text-center text-lg hidden">❌  You can't put negative value</p>
+            <!-- errors area end -->
             <h3 class="text-xl md:text-2xl font-bold mb-4 text-center my-6">Saving Amount: <span id="total-saving">00</span></h3>
-            <!-- errors -->
+            <!-- errors area start -->
             <p id="error-saving" class="errors text-center text-lg hidden">❌  You haven't sufficient balance for saving <br>
             check balance first</p>
+            <!-- errors area end -->
             <h3 class="text-xl md:text-2xl font-bold mb-4 text-center my-6">Remaining Balance: <span id="remaining-balance">00</span></h3>
           </div>
         </div>
       </section>
     </main>
-
+<!-- external js file -->
     <script src="./js/script.js"></script>
   </body>
 </html>

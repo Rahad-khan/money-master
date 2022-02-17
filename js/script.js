@@ -1,9 +1,13 @@
+// Take input value by using id
 function takeInputValue(inputid) {
   const inputText = document.getElementById(inputid + "-amount").value;
   const inputValue = parseFloat(inputText);
   return inputValue;
 }
-//Error function
+/* =================
+Error function
+================== */
+// clear error messages function
 function errorNone() {
   const errors = document.getElementsByClassName("errors");
   for (const error of errors) {
@@ -28,7 +32,7 @@ function isNegative(idString) {
     }
   }
 }
-
+//calculate button click 
 document
   .getElementById("calculate-total")
   .addEventListener("click", function () {
@@ -65,6 +69,7 @@ document
       incomeAmount - totalExpense;
     errorNone();
   });
+  //save button click 
 document.getElementById("savings").addEventListener("click", function () {
   const savingInput = takeInputValue("saving");
   const incomeAmount = takeInputValue("income");
