@@ -95,17 +95,16 @@ document.getElementById("savings").addEventListener("click", function () {
     return;
   }
   errorNone();
-  document.getElementById("total-saving").innerText = (totalSaving).toFixed(2);
   const balanceText = document.getElementById("remaining-amount").innerText;
   const balance = parseFloat(balanceText);
-  // saving is more than remaining balance type error
-  if (balance < totalSaving) {
-    // errorNone();
-    document.getElementById("remaining-balance").innerText = "00";
-    return (document.getElementById("error-saving").style.display = "block");
-  } else {
+// saving is more than remaining balance type error
+if (balance < totalSaving) {
+  // errorNone();
+  document.getElementById("remaining-balance").innerText = "00";
+  return (document.getElementById("error-saving").style.display = "block");
+}
+  document.getElementById("total-saving").innerText = (totalSaving).toFixed(2);
     document.getElementById("error-saving").style.display = "none"
     document.getElementById("remaining-balance").innerText =
       (balance - totalSaving).toFixed(2);
-  }
 });
